@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图片放大观看</title>
+		<link rel="stylesheet" href="resources/css/chocolat.css"/>
+		<style>
+			#example3 img{
+				width: 100px;
+				height: 100px;
+			}
+			#container2{
+				position: absolute;
+				max-width:600px;
+				height: 500px;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin:auto;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="example3" data-chocolat-title="set title">
+			<a class="chocolat-image" href="img/1.jpg" ><img src="img/1.jpg" alt=""/></a>
+			<a class="chocolat-image" href="img/2.jpg" ><img src="img/2.jpg" alt=""/></a>
+			<a class="chocolat-image" href="img/3.jpg" ><img src="img/3.jpg" alt=""/></a>
+			<a class="chocolat-image" href="img/4.jpg" ><img src="img/4.jpg" alt=""/></a>
+			<a class="chocolat-image" href="img/5.jpg" ><img src="img/5.jpg" alt=""/></a>
+			<a class="chocolat-image" href="img/6.jpg" ><img src="img/6.jpg" alt=""/></a>
+			<a class="chocolat-image" href="img/7.jpg" ><img src="img/7.jpg" alt=""/></a>
+			<a class="chocolat-image" href="img/8.jpg" ><img src="img/8.jpg" alt=""/></a>
+		</div>
+
+		<div id="container2" style=""></div>
+
+
+
+	<script src="resources/js/jquery-1.11.3.js"></script>
+	<script src="resources/js/jquery.chocolat.js"></script>
+		<script>
+
+			$('#example3 img').click(function(){
+				var  mask=$('<div class="mask"></div>');
+				var bodyW=document.documentElement.clientWidth;
+				var bodyH=document.documentElement.clientHeight;
+				mask.css({'width':bodyW,'height':bodyH,'background-color':'rgba(00,00,00,0.4)','position':'absolute','z-index':'10','top':'0'});
+				$('body').append(mask);
+			});
+			$('#example3').Chocolat({
+				container      : '#container2',
+				imageSize     : 'cover',
+			});
+			function maskClose(){
+				$('.mask').remove();
+			}
+		</script>
+	</body>
+</html>
