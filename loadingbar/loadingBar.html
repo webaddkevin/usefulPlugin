@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>loadingBar</title>
+  <style type="text/css">
+	body{
+		margin:0;
+	}
+	#progress {
+		position:fixed;
+		height: 2px;
+		background:#2085c5;
+		transition:opacity 500ms linear
+	}
+	#progress.done {
+		opacity:0
+	}
+	#progress span {
+		position:absolute;
+		height:2px;
+		-webkit-box-shadow:#2085c5 1px 0 6px 1px;
+		-webkit-border-radius:100%;
+		opacity:1;
+		width:150px;
+		right:-10px;
+		-webkit-animation:pulse 2s ease-out 0s infinite;
+	}
+
+	@-webkit-keyframes pulse {
+		30% {
+			opacity:.6
+		}
+		60% {
+			opacity:0;
+		}
+		100% {
+			opacity:.6
+		}
+	}
+  </style>
+ </head>
+ <body>
+	<div id="progress">
+		<span></span>
+	</div>
+
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	window.onload = function () {
+		var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
+		console.log('Page load time is '+ loadTime);
+		$({property: 0}).animate({property: 100}, {
+				duration: loadTime,
+				step: function() {
+					var percentage = Math.round(this.property);
+					loadTime < 500 && (percentage=100);
+					$('#progress').css('width',  percentage+"%");
+					 if(percentage == 100) {
+							$("#progress").addClass("done");//完成，隐藏进度条
+						}
+				}
+		});
+	}	
+	
+	</script>
+ </body>
+</html>
