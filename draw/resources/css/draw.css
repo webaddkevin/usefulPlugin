@@ -1,0 +1,268 @@
+@charset "utf-8";
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+input[type=button], input[type=submit], input[type=file], button
+{
+    cursor: pointer; -webkit-appearance: none;
+}
+body,ul,li,p,dl,dt,dd{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+img{
+    vertical-align: bottom;
+}
+.draw_box{
+    background: #FFC21C;
+}
+/*第一块*/
+.head_img img{
+    width:100%;
+}
+/*第二块*/
+.tow_box{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding:10px 7% 30px;
+}
+.tow_box div {
+    background: #FFE8AB;
+    border: 1px solid #470702;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #654814;
+    text-align: center;
+    box-sizing: border-box;
+}
+.tow_box div span{
+    color: #F83221;
+}
+.tow_box .now_integral{
+    width: 50%;
+    height:40px;
+    line-height: 40px;
+}
+.tow_box .draw_integral{
+    width:40%;
+    height:40px;
+    line-height: 40px;
+}
+/*第三块*/
+.three_box{
+    width:86%;
+    margin:0 auto;
+    position: relative;
+}
+.draw_main{
+    position: absolute;
+    overflow: hidden;
+}
+.draw_main li{
+    float: left;
+    width:32%;
+    background: #FFFFFF;
+    border: 1px solid #340602;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.draw_main li:nth-child(3n+2){
+    margin:0 2%;
+}
+
+.draw_main li dl{
+    text-align: center;
+    font-size: 12px;
+}
+.draw_main li.active{
+    background:#FFC21C;
+    /*color: #fff;*/
+}
+.draw_main li dl dt img{
+    width:80%;
+
+}
+#clickBtn{
+    background: transparent;
+    border:none;
+}
+#clickBtn img{
+    width:100%;
+}
+/*第四块*/
+.four_box{
+    text-align: center;
+    padding:34px 0;
+}
+.four_box .share_btn{
+    font-weight: 600;
+    width:39%;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    background: #F13200;
+    border: 1px solid #340602;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 14px;
+    margin:0 auto;
+}
+/*第五块*/
+.five_box{
+    width:86%;
+    margin: 0 auto 30px;
+}
+.slide-title{
+    width:58%;
+    margin:0 auto;
+    position: relative;
+    top:12px;
+    z-index: 999;
+}
+.slide-title img{
+    width:100%;
+}
+.slide-title span{
+    float: left;
+    margin-right: 14px;
+}
+.slide-title span:nth-child(1),
+.slide-container{
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+    background: #FFE8AB;
+    border-radius: 9px;
+}
+.slide-list{
+    position:absolute;
+    width:90%;
+    left:5%;
+    border-top: 1px solid #FFC21C;
+    box-sizing: border-box;
+    top:30px;
+    color:#000;
+    margin:0;
+    padding:0;
+}
+.slide-list li {
+    height:30px;
+    line-height:30px;
+    list-style:none;
+    margin:0;
+    font-size: 12px;
+}
+/*第六块*/
+.six_box{
+    width:86%;
+    margin: 0 auto;
+}
+.six_box p{
+    width:83%;
+    margin:0 auto;
+    position: relative;
+    top:12px;
+    z-index: 999;
+}
+.six_box p img{
+    width: 100%;
+}
+.exchangeList{
+    position: relative;
+
+    height: 240px;
+    background: #FFE8AB;
+    border-radius: 9px;
+}
+.exchangeList:before{
+
+    content:
+            ".";
+
+    display:
+            block;
+
+    height:
+            0;
+
+    visibility:
+            hidden;
+
+}
+.list_auto{
+    border-top: 1px solid #FFC21C;
+    overflow: auto;
+    position:relative;
+    height:210px;
+    width:90%;
+    margin: 30px auto 0;
+    box-sizing: border-box;
+}
+
+.exchangeList ul{
+    position:absolute;
+    width:100%;
+    left:0;
+    box-sizing: border-box;
+    top:0;
+    color:#000;
+    margin:0;
+    padding:0;
+}
+.exchangeList ul li{
+    height:30px;
+    line-height:30px;
+    list-style:none;
+    margin:0;
+    font-size: 12px;
+}
+/*第七块*/
+.seven_box{
+    width:86%;
+    margin: 30px auto 0;
+}
+.seven_box .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.seven_box .title span{
+    width:30%;
+    display: block;
+    height:1px;
+    background:  #9C130B;
+}
+.seven_box .title p{
+    margin:0 5%;
+}
+.rules{
+    text-align: justify;
+    padding:33px 5px 30px;
+    font-size: 12px;
+    color: #C3281D;
+}
+/*适配*/
+@media screen  and (min-width:750px){ /*大于750*/
+    body{
+        background: #efefef;
+    }
+    .draw_box{
+        width:375px;
+        margin:0 auto;
+    }
+}
+@media screen  and (max-width:360px){/*小于320*/
+    .tow_box div{
+        font-size: 12px;
+    }
+    .tow_box .draw_integral{
+        width:45%;
+
+    }
+    .draw_main li dl{
+        font-size: 10px;
+    }
+}
