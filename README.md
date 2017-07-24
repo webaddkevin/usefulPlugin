@@ -5,3 +5,5 @@ This is so many useful plugin for jiangchunfu's job
 
 1. 图片放大插件  <small>photoslider</samll>
 2. 省市三级联动
+3. 加载条
+4. 抽奖
