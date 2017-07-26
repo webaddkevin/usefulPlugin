@@ -7,3 +7,4 @@ This is so many useful plugin for jiangchunfu's job
 2. 省市三级联动
 3. 加载条
 4. 抽奖
+5. 抽奖（旧）
