@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抽奖活动</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="resources/css/draw.css">
+    <script src="resources/js/Statistics.js"></script>
+</head>
+<body>
+
+<div class="drawContent">
+    <div class="drawTopBg"></div>
+    <div class="mainContent">
+        <img src="resources/img/titleTxt.png" class="titleTxt">
+        <div class="nowIntegral">
+            当前积分：720分
+        </div>
+        <p class="everyIntegral">100积分抽一次</p>
+        <div class="banner">
+            <img src="resources/img/jifen.png" id="coupon" style="display:none;width:35px"/>
+            <img src="resources/img/hongbao.png" id="redPacket" style="display:none;width:20px" />
+            <img src="resources/img/kajuan.png" id="integral" style="display: none;width:20px">
+            <div class="turnplate" style="background-image:url(resources/img/turnplate-bg.png);background-size:100% 100%;">
+                <canvas class="item" id="wheelcanvas"></canvas>
+                <img class="pointer" src="resources/img/turnplate-pointer.png"/>
+            </div>
+        </div>
+        <div class="shadow">
+
+        </div>
+        <div class="txt">
+
+            <div class="slider">
+                <div class="slide-title">
+                    ·中奖公告栏
+                </div>
+                <div class="slide-container">
+                    <ul class="slide-list js-slide-list">
+                       <li>恭喜 大**  在  2017-11-19 15:51:00   抽到了   20网费</li>
+                       <li>恭喜 大**  在  2017-11-19 15:51:00   抽到了   20网费</li>
+                       <li>恭喜 大**  在  2017-11-19 15:51:00   抽到了   20网费</li>
+                       <li>恭喜 大**  在  2017-11-19 15:51:00   抽到了   20网费</li>
+                       <li>恭喜 大**  在  2017-11-19 15:51:00   抽到了   20网费</li>
+                       <li>恭喜 大**  在  2017-11-19 15:51:00   抽到了   20网费</li>
+                       <li>恭喜 大**  在  2017-11-19 15:51:00   抽到了   20网费</li>
+                       <li>恭喜 大**  在  2017-11-19 15:51:00   抽到了   20网费</li>
+                       <li>恭喜 大**  在  2017-11-19 15:51:00   抽到了   20网费</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="exchange">
+                <p>·我的抽奖和兑换记录</p>
+                <div class="exchangeList">
+                    <ul>
+                        <li>您在  2017-11-19 15:51:00   抽到了 80积分</li>
+                        <li>您在  2017-11-19 15:51:00   抽到了 80积分</li>
+                        <li>您在  2017-11-19 15:51:00   抽到了 80积分</li>
+                        <li>您在  2017-11-19 15:51:00   抽到了   80积分</li>
+                        <li>您在  2017-11-19 15:51:00   抽到了   80积分</li>
+                        <li>您在  2017-11-19 15:51:00   抽到了   80积分</li>
+                        <li>您在  2017-11-19 15:51:00   抽到了   80积分</li>
+                        <li>您在  2017-11-19 15:51:00   抽到了   80积分</li>
+                        <li>您在  2017-11-19 15:51:00   抽到了   80积分</li>
+                        <li>您在  2017-11-19 15:51:00   抽到了   80积分</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="rule">
+                <p>·抽奖规则</p>
+                <ul>
+                    <li>1.每次抽奖会消耗一定积分,抽奖后积分不可退回,每天最多抽三次</li>
+                    <li>2.若抽到优惠券则到我的优惠券中查看，有效期30日</li>
+                    <li>3.若抽到网费则凭对应网费兑换码去合作网咖兑换，兑换期限从中奖起30日有效</li>
+                    <li>4.若抽到1000元现金请与客服联系</li>
+                    <li>5.如有疑问请咨询走火客服</li>
+                    <li>6.在法律允许的范围内，本公司拥有最终解释权</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="endPop">
+    <span>×</span>
+    <img src="resources/img/endBg.png">
+    <p>+100元网费</p>
+</div>
+<div class="bg"></div>
+<script type="text/javascript" src="resources/js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="resources/js/awardRotate.js"></script>
+<script type="text/javascript" src="resources/js/draw.js"></script>
+</body>
+</html>

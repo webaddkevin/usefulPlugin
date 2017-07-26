@@ -1,0 +1,246 @@
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{
+    margin:0;
+    padding:0;
+    border:0;
+}
+body{
+    color:#333;
+    font-size:14px;
+    font-family:"Microsoft YaHei";
+    background: #6B4092;}
+ul,ol{
+    list-style-type:none;
+}
+select,input,img,select{
+    vertical-align:middle;
+}
+input{
+    font-size:12px;
+}
+a{
+    text-decoration:none;
+    color:#000;
+}
+a:hover{
+    color:#c00;
+    text-decoration:none;
+}
+.clear{
+    clear:both;
+}
+
+/*弹出框样式*/
+.endPop{
+    display: none;
+    width: 86.4%;
+    min-height: 100px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    position: absolute;
+    top:240px;
+    left:26px;
+    z-index: 9999;
+    position: relative;
+}
+.endPop img{
+    width:50%;
+}
+.endPop span{
+    position: absolute;
+    top:3%;
+    right:5%;
+    font-size: 20px;
+}
+.endPop p{
+    position: absolute;
+    top:40%;
+    left:55%;
+    font-size: 18px;
+    color: #EC521E;
+
+}
+
+/* 大转盘样式 */
+.drawContent{
+    background: #6B4092;
+    padding-bottom:30px;
+}
+.drawTopBg{
+    position: absolute;
+    z-index: 1;
+    width:100%;
+    height:36.4%;
+    background: url(../img/choujiangbg1.png) no-repeat 100% 100%;
+    background-size: cover;
+}
+.mainContent{
+    position: relative;
+    z-index: 50;
+    display: none;
+}
+
+.titleTxt{
+    width: 68.8%;
+    display: block;
+    position: absolute;
+    left:59px;
+    top:34.2px;
+}
+.nowIntegral{
+    width:45.9%;
+    background: url(../img/Rectangle.png) no-repeat 100% 100%;
+    background-size: cover;
+    position: absolute;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 30px;
+}
+.everyIntegral{
+    position: absolute;
+    font-size: 12px;
+    color: #EC521E;
+}
+.banner{
+    display:block;
+    width:74.7%;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+    z-index: 40;
+}
+.banner .turnplate{
+    display:block;
+    width:100%;
+    position:absolute;
+    top:164px;
+}
+.banner .turnplate canvas.item{
+    width:100%;
+}
+.banner .turnplate img.pointer{
+    position:absolute;
+    width:31.5%;
+    height:38.5%;
+    left:34.6%;
+    top:27%;
+}
+.shadow{
+    width: 44.8%;
+    height:21px;
+    background: url(../img/Oval.png) no-repeat 100% 100%;
+    background-size: cover;
+    position: absolute;
+    z-index: 20;
+}
+.txt{
+    position: absolute;
+}
+.slider{
+    width:80%;
+    margin: 0 auto;
+    padding:20px;
+    background: #522C75;
+    border-radius: 4px;
+}
+.slide-title{
+    height: 34px;
+    line-height: 34px;
+    padding: 0 10px;
+    font-size: 14px;
+    color: #FFBA00;
+    box-shadow: 0 1px 0 0 #58327A;
+    border-bottom: 1px solid #492867;
+}
+.slide-title span{
+    float: left;
+    margin-right: 14px;
+}
+.slide-title span:nth-child(1),
+.slide-container{
+    position: relative;
+    overflow: hidden;
+    height: 90px;
+}
+.slide-list{
+    position:absolute;
+    width:100%;
+    left:0;
+    top:0;
+    color:#000;
+    margin:0;
+    padding:0;
+}
+.slide-list li {
+    height:30px;
+    line-height:30px;
+    list-style:none;
+    margin:0;
+    padding:0 10px;
+    font-size: 12px;
+    color: #9573C4;
+}
+
+.exchange{
+    width:80%;
+    margin: 50px auto 0;
+    padding:20px;
+    background: #522C75;
+    border-radius: 4px;
+}
+.exchange p {
+    height: 34px;
+    line-height: 34px;
+    padding: 0 10px;
+    font-size: 14px;
+    color: #FFBA00;
+    box-shadow: 0 1px 0 0 #58327A;
+    border-bottom: 1px solid #492867;
+}
+.exchangeList{
+    height:150px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.exchangeList ul li{
+    text-align: justify;
+    line-height: 30px;
+    font-size: 12px;
+    color: #9673C5;
+}
+
+.rule{
+    width:90%;
+    margin: 50px auto 30px;
+    font-size: 10px;
+    color: #FFFFFF;
+    text-align: justify;
+}
+.rule p{
+    margin:10px 0 5px;
+    font-size: 14px;
+    color: #FFB900;
+}
+.rule li{
+    text-align: justify;
+    line-height: 20px;
+}
+@media screen and (min-width:750px){
+        body{
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            width:375px;
+            margin:0 auto;
+            background: #ccc;
+        }
+}
+@media screen and (max-width:320px){
+    .slider,.exchange,.rule{
+        width:90%;
+        padding:20px 5px;
+    }
+    .slide-list li{
+        padding:0;
+    }
+
+}
