@@ -1,0 +1,112 @@
+@charset "utf-8";
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+input[type=button], input[type=submit], input[type=file], button
+{
+    cursor: pointer; -webkit-appearance: none;
+}
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{
+    margin:0;
+    padding:0;
+    border:0;
+    list-style: none;
+}
+body{
+    background: #534EF0;
+}
+.container{
+    background: #534EF0;
+}
+#alert_box{
+    display: none;
+}
+.listContainer{
+    padding:20px;
+    box-sizing: border-box;
+}
+.listContainer li{
+    overflow: hidden;
+    line-height: 20px;
+    padding:10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+.listContainer li:last-child{
+    border:none;
+}
+.listContainer li>span{
+    float: left;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.listContainer li>span:nth-child(1){
+    width:50%;
+    color: #FF7E50;
+}
+.listContainer li>span:nth-child(2){
+    width:30%;
+    font-size: 12px;
+}
+.listContainer li>button{
+    border: 1px solid #FF7E50;
+    border-radius: 4px;
+    background:transparent;
+    color: #FF7E50;
+    width:50px;
+    height:30px;
+    line-height: 30px;
+}
+#wrapper{
+    overflow: auto;
+}
+.scancode{
+    padding:20px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    width:76%;
+    position: absolute;
+    top: 35%;
+    left:12%;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 9999;
+    display: none;
+}
+#sure{
+    width:100%;
+    height:34px;
+    line-height: 34px;
+    border:none;
+    background: #FE7606;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    margin:0;
+
+}
+.bg{
+    display: none;
+    width:100%;
+    background:rgba(0,0,0,0.49);
+    position:absolute;
+    z-index:99;
+    left:0;
+    top:0;
+}
+.dropload-refresh, .dropload-update, .dropload-load, .dropload-noData{
+    color: #A9A6F7;
+}
+@media only screen and (min-width:750px){
+    .container{
+        width:375px;
+        margin: 0 auto;
+    }
+
+}
+@media only screen and (max-width:320px){
+    .listContainer li>span{
+        font-size: 12px;
+    }
+
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>充值抽奖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="resources/css/draw.css">
+</head>
+<body>
+
+<div class="drawContent">
+    <div class="mainContent">
+        <div class="titleTxt">
+            <span></span>
+        </div>
+        <img src="https://metadata.zhutech.net/o_1bua7a0gq1p2p1n4g1q9s9s4nar2k.png" class="item-img item-1">
+        <img src="https://metadata.zhutech.net/o_1bua77r3sp6k4kj1mq8dls1ede26.png" class="item-img item-2">
+        <img src="https://metadata.zhutech.net/o_1bua77r3s1q5k1ces195oo661i2q25.png" class="item-img item-3">
+        <img src="https://metadata.zhutech.net/o_1bua77r3s1kqbbojik5see1irj23.png" class="item-img item-4">
+        <div class="nowIntegral">
+            我还有 <span></span> 次抽奖机会
+        </div>
+        <div class="banner">
+            <img src="https://metadata.zhutech.net/o_1buaqvvn01a2pbem221sv610n911.png" id="coupon" style="display:none;width:35px"/>
+            <img src="https://metadata.zhutech.net/o_1buaqvvn0jngo4b19djjg1ic012.png" id="redPacket" style="display:none;width:20px" />
+            <img src="https://metadata.zhutech.net/o_1buaqvjdb1mjhq301ap8bukgcen.png" id="integral" style="display: none;width:20px">
+            <div class="turnplate" style="background-image:url('https://metadata.zhutech.net/o_1bua3kqa51ub614lpsmb13gbgkdm.png');background-size:100% 100%;">
+                <canvas class="item" id="wheelcanvas"></canvas>
+                <img class="pointer  canClick" src="https://metadata.zhutech.net/o_1bua3r43v1bid5b71bvftqj14mdr.png"/>
+            </div>
+        </div>
+        <img src="https://metadata.zhutech.net/o_1bua62sp58q8gv7vfpj57m1m.png" class="pedestal">
+        <img src="https://metadata.zhutech.net/o_1bua6f6id1jarrtvjr988v1m141r.png" class="myPrize">
+        <div class="rechargeWarn">
+            充值订单每达 <span class="chargeAmount"></span> 元，可获得 <span>1</span> 次抽奖机会
+        </div>
+        <div class="txt">
+
+            <div class="slider">
+                <div class="slide-title">
+                   <span class="border"></span><span class="vertical"></span><span class="title">中奖名单</span><span class="vertical"></span><span class="border"></span>
+                </div>
+                <div class="slide-container">
+                    <ul class="slide-list js-slide-list">
+                    </ul>
+                </div>
+
+            </div>
+            <div class="rule">
+                <div class="ruleTitle"><span class="border"></span><span class="vertical"></span><span class="title">抽奖规则</span><span class="vertical"></span><span class="border"></span></div>
+                <ul>
+                    <li>1.每次抽奖会消耗一定积分,抽奖后积分不可退回,每天最多抽三次。</li>
+                    <li>2.若抽到优惠券则到我的优惠券中查看，有效期30日。</li>
+                    <li>3.若抽到网费则凭对应网费兑换码去合作网咖兑换，兑换期限从中奖起30日有效。</li>
+                    <li>4.若抽到1000元现金请与客服联系。</li>
+                    <li>5.如有疑问请咨询走火客服。</li>
+                    <li>6.在法律允许的范围内，本公司拥有最终解释权。</li>
+                </ul>
+            </div>
+        </div>
+        <div class="endPop">
+            <span class="closeEndPop"></span>
+            <div class="endPopTitle">
+                <span class="border"></span><span class="endPopTxt">恭喜您抽中</span><span class="border"></span>
+            </div>
+            <p class="artxt">游戏币×20</p>
+            <div style="text-align: center">
+                <canvas id="canvascode" width="200px"></canvas>
+            </div>
+            <img src="https://metadata.zhutech.net/o_1buapricnmnk15nv15c76cjrvum.png" class="getCoins">
+            <p class="copy">请点“复制”，打开浏览器“粘贴”后领奖</p>
+            <button type="button" id="copy">复制</button>
+            <button type="button" id="sure">领取</button>
+            <button type="button" id="receptionGet">请前往服务台领奖！</button>
+            <button type="button" id="gotoH5">领取</button>
+        </div>
+        <div class="bg"></div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="resources/js/jquery-1.11.3.js"></script>
+<script src="resources/js/JsBarcode.all.min.js"></script>
+<script type="text/javascript" src="resources/js/awardRotate.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.0.js"></script>
+<script src="resources/js/clipboard.min.js"></script>
+<script type="text/javascript" src="resources/js/draw.js"></script>
+
+</body>
+</html>
